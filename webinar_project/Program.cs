@@ -1,2 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// 20.01.2023 Вебинар 3.  курс: "Знакомство с языками программирования"
+
+
