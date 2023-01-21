@@ -25,21 +25,27 @@ double checkInput(String input) {
     return result;
 }
 Console.WriteLine("Программа принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.");
-Console.WriteLine("Введите координату X точки А:");
-double Xa = checkInput(Console.ReadLine());
-Console.WriteLine("Введите координату Y точки А:");
-double Ya = checkInput(Console.ReadLine());
-Console.WriteLine("Введите координату Z точки А:");
-double Za = checkInput(Console.ReadLine());
-Console.WriteLine("Введите координату X точки B:");
-double Xb = checkInput(Console.ReadLine());
-Console.WriteLine("Введите координату Y точки B:");
-double Yb = checkInput(Console.ReadLine());
-Console.WriteLine("Введите координату Z точки B:");
-double Zb = checkInput(Console.ReadLine());
+string exit_condition = null;
+while(exit_condition != "n") {
+    Console.WriteLine("Введите координату X точки А:");
+    double Xa = checkInput(Console.ReadLine());
+    Console.WriteLine("Введите координату Y точки А:");
+    double Ya = checkInput(Console.ReadLine());
+    Console.WriteLine("Введите координату Z точки А:");
+    double Za = checkInput(Console.ReadLine());
+    Console.WriteLine("Введите координату X точки B:");
+    double Xb = checkInput(Console.ReadLine());
+    Console.WriteLine("Введите координату Y точки B:");
+    double Yb = checkInput(Console.ReadLine());
+    Console.WriteLine("Введите координату Z точки B:");
+    double Zb = checkInput(Console.ReadLine());
 
-// 3. Демонстрация работы функции и вывод результата в нужном формате
-double distance = distanceBetween2DotsIn3D(Xa, Ya, Za, Xb, Yb, Zb);
-Console.WriteLine($"Расстояние между точками А({Xa.ToString("#.##")}; {Ya.ToString("#.##")}; {Za.ToString("#.##")}) и B({Xb.ToString("#.##")}; {Yb.ToString("#.##")}; {Zb.ToString("#.##")}) равно: {Math.Round(distance, 2)}");
+    // 3. Демонстрация работы функции и вывод результата в нужном формате
+    double distance = distanceBetween2DotsIn3D(Xa, Ya, Za, Xb, Yb, Zb);
+    Console.WriteLine($"Расстояние между точками А({Xa.ToString("#.##")}; {Ya.ToString("#.##")}; {Za.ToString("#.##")}) и B({Xb.ToString("#.##")}; {Yb.ToString("#.##")}; {Zb.ToString("#.##")}) равно: {Math.Round(distance, 2)}");
 
+    Console.WriteLine("Хотите ещё раз? (y/n): ");
+    exit_condition = Console.ReadLine();
+}
 
+Console.WriteLine("Спасибо за использование программы))");

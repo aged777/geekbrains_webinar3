@@ -4,11 +4,11 @@
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
-// 1. Ввод данных c проверкой
+// 1. Функция проверки входных данных
 // 2. Функция вычисления и вывода на экран
 // 3. Демонстрация работы функции
 
-// 1. Ввод данных c проверкой, что введено число
+// 1. Функция проверки входных данных
 int checkInput(String input) {
     int result;
     while(true) {
@@ -19,10 +19,6 @@ int checkInput(String input) {
     }
     return result;
 }
-
-Console.WriteLine("Программа, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.");
-Console.WriteLine("Введите целое число.");
-int number = checkInput(Console.ReadLine());
 
 // 2. Функция вычисления и вывода на экран
 void printNumberQubeTable(int number) {
@@ -37,7 +33,20 @@ void printNumberQubeTable(int number) {
         Console.Write(", " + Math.Pow(count, 3));
         count++;
     }
+    Console.WriteLine("");
 }
 
 // 3. Демонстрация работы функции
-printNumberQubeTable(number);
+Console.WriteLine("Программа, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.");
+string exit_condition = null;
+while(exit_condition != "n") {
+    Console.WriteLine("Введите целое число.");
+    int number = checkInput(Console.ReadLine());
+
+    printNumberQubeTable(number);
+    
+    Console.WriteLine("Хотите ещё раз? (y/n): ");
+    exit_condition = Console.ReadLine();
+}
+
+Console.WriteLine("Спасибо за использование программы))");
