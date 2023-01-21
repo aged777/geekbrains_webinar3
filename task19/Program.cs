@@ -10,9 +10,9 @@
 
 // 1. Реализация логики функции с проверкой входных данных, что это целое пятизначное число
 bool isInputNumberPalindrome(int input) {
-    while(!(input > 9999 && input < 100000)) {
+    if(!(input > 9999 && input < 100000)) {
         Console.WriteLine("Введено не пятизначное число.");
-        break;
+        throw new Exception();
     }
     if(input / 10000 == input % 10 && input / 1000 % 10 == input % 100 / 10) return true;
     else return false;

@@ -12,8 +12,8 @@
 int checkInput(String input) {
     int result;
     while(true) {
-        if(!int.TryParse(input, out result)) {
-            Console.WriteLine("Введите число.");
+        if(!int.TryParse(input, out result) && result > 0) {
+            Console.WriteLine("Введите положительное число.");
             input = Console.ReadLine();
         } else break;
     }
