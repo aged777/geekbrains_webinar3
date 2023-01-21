@@ -40,6 +40,6 @@ double Zb = checkInput(Console.ReadLine());
 
 // 3. Демонстрация работы функции и вывод результата в нужном формате
 double distance = distanceBetween2DotsIn3D(Xa, Ya, Za, Xb, Yb, Zb);
-Console.WriteLine($"Расстояние между точками А({Xa.ToString("#.##")}, {Ya.ToString("#.##")}, {Za.ToString("#.##")}) и B({Xb.ToString("#.##")}, {Yb.ToString("#.##")}, {Zb.ToString("#.##")}) равно: {Math.Round(distance, 2)}");
+Console.WriteLine($"Расстояние между точками А({Xa.ToString("#.##")}; {Ya.ToString("#.##")}; {Za.ToString("#.##")}) и B({Xb.ToString("#.##")}; {Yb.ToString("#.##")}; {Zb.ToString("#.##")}) равно: {Math.Round(distance, 2)}");
 
 
